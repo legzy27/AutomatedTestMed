@@ -13,7 +13,7 @@ describe('Medicines.org.uk App', function() {
   it('Capture details of first company', function() {
     browser.manage().timeouts().implicitlyWait(2 * 50000);
     med.comName();
-    browser.sleep(4000);
+    browser.sleep(5000);
     var EC = protractor.ExpectedConditions;
     // Waits for the element image to be visible 
     browser.wait(EC.visibilityOf($('img[alt="Company image"]')),5000);
@@ -34,7 +34,7 @@ describe('Medicines.org.uk App', function() {
   it('Capture details of Third company', function() {
     browser.manage().timeouts().implicitlyWait(2 * 30000);
     element(by.partialLinkText("Accord Healthcare Limited")).click();
-    browser.sleep(4000);
+    browser.sleep(5000);
     var EC = protractor.ExpectedConditions;
     // Waits for the element image to be visible 
     browser.wait(EC.visibilityOf($('img[alt="Company image"]')),5000);
@@ -50,15 +50,15 @@ describe('Medicines.org.uk App', function() {
   it('Capture details of Last company', function() {
     browser.manage().timeouts().implicitlyWait(2 * 30000);
     element(by.partialLinkText("Aurobindo Pharma - Milpharm Ltd.")).click();
-    browser.sleep(4000);
+    browser.sleep(5000);
     var EC = protractor.ExpectedConditions;
-    // Waits for the element image to be visible 
+    // Waits for the image to be visible 
     browser.wait(EC.visibilityOf($('img[alt="Company image"]')),5000);
    // Gets title of the page
    browser.getTitle().then(function(title){
     console.log("Web page title is : " + title );
    });
-  // Capture contact details 
+  // Capture contact details of the third company
      expect(element.all(by.className("gfdCompanyDetailsTitle")).isPresent()).toBe(true);
       browser.navigate().back();
 

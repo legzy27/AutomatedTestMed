@@ -1,5 +1,9 @@
-var data = require('./jsonfiles/global.json')
+var data = require('./jsonfiles/contactinfo.json')
 
+
+
+// Read company contact information from JSON File and output data
+// import the json file contactinfo.json in readcompanydetails file and read the json data
 describe("Read JSON file", function(){
     
     it('Take screenshot of logo', function(){
@@ -11,7 +15,7 @@ describe("Read JSON file", function(){
       console.log(data.MedicalInformationemail);
       console.log(data.OutofHoursTelephone);
 
-})
+});
 
 
-})
+});
