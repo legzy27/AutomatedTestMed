@@ -1,8 +1,6 @@
 var  med = require('./pom.js');
 
 describe('Medicines.org.uk App', function() {
- 
-
   beforeEach( async function() {
     browser.ignoreSynchronization = true;
     med.get();
@@ -23,9 +21,7 @@ describe('Medicines.org.uk App', function() {
    });
   // Capture contact details 
      var text = element(by.className('gfdCompanyDetailsTitle'));
-     expect(text.getText()).toMatch('Address');
-
-    
+     expect(text.getText()).toMatch('Address');  
      browser.navigate().back();
   
    
